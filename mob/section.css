@@ -87,8 +87,12 @@
 
 /*CONFIGURAÇÃO DA SEÇÃO TRES*/
 .espaço-sectdois{
+    display: flex;
+    margin: 0;
+
     height: 100%;
     width: 100%;
+    z-index: 2;
 }
 
 /*CONFIGURAÇÃO DO TEXTO*/
@@ -98,6 +102,9 @@
     align-items: center;
     width: 100%;
     margin-top: 150px;
+    margin: 0;
+    z-index: 4;
+
 }
 #titulo-espaçodois{
     font-size: 23px;
