@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+<html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="https://i.postimg.cc/pTC5dZDj/Ativo-9-8.png">
-    <script src="https://kit.fontawesome.com/266015c250.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/headerdesk.css">
     <link rel="stylesheet" href="css/maindesk.css">
     <link rel="stylesheet" href="css/sectiondesk.css"> 
@@ -20,6 +19,11 @@
 <body>
 
     <style>
+        
+        html{
+            width: 100%;
+        }
+
          body{
             width: 100%;
             box-sizing: 0px;
@@ -27,20 +31,15 @@
             margin: 0px;
             font-family: Arial, Helvetica, sans-serif;
         }
+
         a{
             color: black;
             text-decoration: none;
         }
 
-        .ativar-menu{
-        background-color: white;
-        display: flex;
-        flex-wrap: wrap;
-        position: absolute;
-        width: 100%;
-        height: 900px;
-        transform: translateX(0px);
-        transition: 0.5s;
+        .ativar-scroll{
+            transition: 0.6s;
+            background-color: #0D3371;
         }
 
         @media (max-width:700px){
@@ -48,15 +47,15 @@
             padding: 0px;
             margin:0px;
             width:100%;
-
            overflow-x: hidden;
-        }
+            }
+
         }
 
 
     </style>
-    
-    <header>
+
+    <header class="headerpink">
 
         <article class="desk-logo">
             <img src="https://i.postimg.cc/pTC5dZDj/Ativo-9-8.png" alt="" id="logotipo-desk">
@@ -64,50 +63,50 @@
         </article>
 
         <nav class="desk-nav">
-            <a href="" id="desk-dadosnav">Inicio</a>
-            <a href="" id="desk-dadosnav">Galeria</a>
-            <a href="" id="desk-dadosnav">Eventos</a>
-            <a href="" id="desk-dadosnav">Localização</a>
+            <a href="index.html" id="desk-dadosnav">Inicio</a>
+            <a href="page/galery.html" id="desk-dadosnav">Galeria</a>
+            <a href="page/eventos.html" id="desk-dadosnav">Eventos</a>
+            <a href="page/localizaçao.html" id="desk-dadosnav">Localização</a>
         </nav>
 
         <nav class="desk-contato">
-            <a href="" id="desk-contatonavpro">Promoção</a>
-            <a href="" id="desk-contatonav">Fale Conosco</a>
+            <a href="https://api.whatsapp.com/send?phone=5511942903148" id="desk-contatonavpro">Promoção</a>
+            <a href="https://api.whatsapp.com/send?phone=5511942903148" id="desk-contatonav">Fale Conosco</a>
         </nav>
 
         <article class="desk-menumob">
             
-            <i class="fa-solid fa-bars-staggered" id="icon-menu"></i>
+            <i class="fa-solid fa-bars-staggered" id="menu"></i>
 
 
         </article>
 
-        <div id="fundo-menumob">
+        
+        <div class="fundo-menu">
 
             <div id="section-inicialmenu">
                 <p id="inicial-logo">Elysian Place</p>
                 <i class="fa-solid fa-xmark" id="icon-fecharmenu"></i>
             </div>
 
-            <div class="rolagem-menumob">
+            <nav id="section-menumob">
+                    <a href="index.html" id="mob-dadosnav">Inicio</a>
+                    <a href="page/galery.html" id="mob-dadosnav">Galeria</a>
+                    <a href="page/eventos.html" id="mob-dadosnav">Eventos</a>
+                    <a href="page/localizaçao.html" id="mob-dadosnav">Localização</a>
+            </nav>
 
-                <div id="section-menumob">
-                    <p id="redes-menumob"><i class="fa-brands fa-whatsapp" id="icon-mobmenu"></i>(11) 94290-3148</p>
-                    <p id="redes-menumob"><i class="fa-brands fa-facebook" id="icon-mobmenu"></i> Elysian Place</p>
-                    <p id="redes-menumob"><i class="fa-brands fa-instagram" id="icon-mobmenu"></i> Elysian Place</p>
-                    <p id="redes-menumob"><i class="fa-solid fa-envelope" id="icon-mobmenu"></i>placeelysian@gmail.com</p>
-                    <a href="https://api.whatsapp.com/send?phone=5511942903148" class="botao-menumob">Fale Conosco</a>  
-                </div>
-        
-    
-            </div>
+            <a href="https://api.whatsapp.com/send?phone=5511942903148" id="btn-mobmenu">Fale Conosco</a>
 
         </div>
+
+        <script src="js/header.js"></script>
 
     </header>
 
     <main>
 
+        <!--config frase de efeito-->
         <article class="desk-main">
             <p id="desk-textmain">Um sítio que combina o melhor do lazer e do conforto,<br> 
                 para você celebrar com quem mais importa.</p>
@@ -115,44 +114,80 @@
                 <p id="desk-textmainone">Seus eventos, nosso espaço.</p>
         </article>
 
+        <!--config "comece aqui"-->
         <article class="desk-mainbtn">
-            <p id="desk-comeceaqui">Comece por aqui</p>
+            <a href="https://api.whatsapp.com/send?phone=5511942903148" id="desk-comeceaqui">Comece por aqui</a href="https://api.whatsapp.com/send?phone=5511942903148">
         </article>
 
+        <!--config carrossel de blocos-->
         <article class="desk-bloc">
 
             <div class="seta-esquerda">
                 <i class="fa-solid fa-arrow-left" id="seta-bloc"></i>
             </div>
 
-            <article id="blc-maior">
+            <article id="fundo-carrossel">
 
-            <div class="section-blcladoum">
+            <div class="mySlides fade" id="slidemob">
 
-                <div id="blcladoum">
-                    <img src="https://i.postimg.cc/pdKMKVXQ/ip-WZCBr5-t-2.jpg" alt="" id="img-maior">
-                </div>
+                <div id="blcladoum"><a href="page/eventos.html">
+                    <img src="https://thumbs2.imgbox.com/ff/7f/TajvbPzS_t.jpg" alt="" id="img-maior">
+                </a></div>
 
                 <div id="blcladodois">
                     <p id="titulo-blc">Especial de Verão!!</p>
-                    <p id="text-blc">Confira os dias disponiveis para fazer sua confraternização entre Dezembro e Março 
-                    </p>
+                    <p id="text-blc">Confira os dias disponiveis para Dezembro e Março </p>
+
+                    <a href="https://api.whatsapp.com/send?phone=5511942903148" id="btn-conferirum">Conferir Ofertas</a>
                 </div>
                 
-            </div>
+            </div> 
+
+            <div class="mySlides fade" id="slidemob"><a href="page/eventos.html">
+
+                <div id="blcladoum"><a href="page/eventos.html">
+                    <img src="https://thumbs2.imgbox.com/9b/10/g0ZNHgb8_t.jpg" alt="" id="img-maior">
+                </a></div>
+
+                <div id="blcladodois">
+                    <p id="titulo-blc">Oferta de Natal!!</p>
+                    <p id="text-blc">Sitío Ideal para suporta toda a sua familia e muita diversão </p>
+
+                    <a href="https://api.whatsapp.com/send?phone=5511942903148" id="btn-conferirum">Conferir Ofertas</a>
+                </div>
+                
+            </a></div> 
+
+            <div class="mySlides fade" id="slidemob">
+
+                <div id="blcladoum">
+                    <img src="https://thumbs2.imgbox.com/e4/ed/szq6dAX1_t.jpg" alt="" id="img-maior">
+                </div>
+
+                <div id="blcladodois">
+                    <p id="titulo-blc">Vagas para o Ano Novo!!</p>
+                    <p id="text-blc">Alugue para passar a virada de ano de maneira inesquecível  </p>
+
+                    <a href="https://api.whatsapp.com/send?phone=5511942903148" id="btn-conferirum">Conferir Oferta</a>
+                </div>
+                
+            </div>  
 
             </article>
 
             <article class="blc-menor">
+
                 <div id="blc-circulo">
                     <p id="circ-blc"></p>
                     <p id="circ-blc"></p>
                     <p id="circ-blc"></p>
                     <p id="circ-blctd">+80</p>
                 </div>
+
                 <div id="blc-pequeno">
-                    <p id="text-blc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore tetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore </p>
+                    <p id="text-blc">Veja o que os nossos clientes falam de nossos Serviços, fazemos o melhor trabalho para atender suas expectativas</p>
                 </div>
+
             </article>
 
             <div class="seta-direita">
@@ -178,17 +213,35 @@
                 </div>
             </article>
 
-
-
-
         </article>
+
+        <script >
+            // ATIVAÇÃO DO CARROSSEL
+        var slideIndexum = 0;
+
+        showSlidesum();
+
+        function showSlidesum() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+          slideIndexum++;
+          if (slideIndexum > slides.length) {slideIndexum = 1}
+          slides[slideIndexum-1].style.display = "flex";
+          setTimeout(showSlidesum, 3000); // Change image every 2 seconds
+        }
+ 
+        </script>
 
     </main>
 
     <section class="sect-um">
-
+        <!--/*seção-um - lado um*/-->
         <article class="sect-blocum">
-
+            <!--/*lista da seção-um*/-->
             <ul class="list-blocum">
                 <p id="titulo-blocum">Tudo o que você Precisa:</p>
                 <li id="dados-bloc">Campo de Futebol</li>
@@ -201,14 +254,14 @@
                 <li id="dados-bloc">Sala de Estar e de Almoço</li>
                 <li id="dados-bloc">Lindo Campo de Flores</li>
             </ul>
-            
+            <!--/*fundo dos icones seçao-um*/-->
             <div class="sect-blocdois">
                 <i class="fa-solid fa-bed" id="icons-blocdois"><p id="dados-icons">20</p></i>
                 <i class="fa-solid fa-car" id="icons-blocdois"><p id="dados-icons">20</p></i>
                 <i class="fa-solid fa-water-ladder" id="icons-blocdois"><p id="dados-icons">20</p></i>
                 <i class="fa-solid fa-shower" id="icons-blocdois"><p id="dados-icons">20</p></i>
             </div>
-
+            <!--/*fundo dos texto da seção-um*/-->
             <div class="sect-bloctres">
                 <p id="text-bloctres">O Sítio esta localizado próximo do Centro de Atibaia,  numa boa<br>
                     locação perto de mercados, restaurantes e ambientes movimentados.</p>
@@ -218,21 +271,54 @@
             
         </article>
 
+        <!-- /*seção-um - lado dois*/ -->
         <article class="sectdois-bloc">
 
+            <!--/*fundo segundo carrossel*/-->
             <div class="fundo-blocdois">
-                <div id="blocdois-planum">
-                    <img src="https://i.postimg.cc/gj9cmL7h/90ya-X6j-U-t.jpg" alt="" id="img-plabloc">
-                </div>
-                <div id="blocdois-plandois">
-                    <img src="https://i.postimg.cc/bJ8cgXs7/Atibaia-01-Rogerio-Pinheiro.jpg" alt="" id="img-plabloc">
-                </div>
-                <div id="blocdois-plantres">
-                    <img src="https://i.postimg.cc/pdKMKVXQ/ip-WZCBr5-t-2.jpg" alt="" id="img-plabloc">
-                </div>
-            </div>
 
+                <div id="blocdois-planum" >
+                    <img src="https://i.postimg.cc/gj9cmL7h/90ya-X6j-U-t.jpg" alt="" id="img-plabloc" class="novoslides" >
+                </div>
+
+                <div id="blocdois-plandois"  >
+                    <img src="https://i.postimg.cc/bJ8cgXs7/Atibaia-01-Rogerio-Pinheiro.jpg" alt="" id="img-plabloc" class="novoslides" >
+                </div>
+
+                <div id="blocdois-plantres" >
+                    <img src="https://i.postimg.cc/pdKMKVXQ/ip-WZCBr5-t-2.jpg" class="myslidenovo" alt="" id="img-plabloc">
+                    <img src="https://i.postimg.cc/8ch1Rghk/IMG-0416-Editar.jpg" class="myslidenovo" alt="" id="img-plabloc">      
+                    <img src="https://i.postimg.cc/26gdYTmx/oficial-fundo.jpg" class="myslidenovo" alt="" id="img-plabloc">                    
+                    <img src="https://i.postimg.cc/vHDm2T5k/IMG-20240311-WA0046.jpg" class="myslidenovo" alt="" id="img-plabloc">      
+                    <img src="https://i.postimg.cc/kgsqndNK/IMG-20240312-WA0060.jpg" class="myslidenovo" alt="" id="img-plabloc">      
+                    <img src="https://i.postimg.cc/d1mgsQvY/IMG-0348-Editar.jpg" class="myslidenovo" alt="" id="img-plabloc">      
+                    <img src="https://i.postimg.cc/vHDm2T5k/IMG-20240311-WA0046.jpg" class="myslidenovo" alt="" id="img-plabloc">      
+                </div>
+
+                <script >
+                    var slideIndex = 0;
+
+                showSlidesdois();
+
+                function showSlidesdois() {
+                    var i;
+                    var slides = document.getElementsByClassName("myslidenovo");
+                    for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";
+                                  }
+
+                    slideIndexdois++;
+                    if (slideIndexdois > slides.length) {slideIndexdois = 1}
+                    slides[slideIndexdois-1].style.display = "flex";
+                    setTimeout(showSlidesdois, 3000); // Change image every 2 seconds
+                    }
+                </script>
+
+            </div>
+            
+            <!--/*fundo configuração do carrossel*/-->
             <div class="fundo-blocdoissistema">
+
                 <i class="bi bi-arrow-left-short" id="icons-setblocodoisir"></i>
 
                 <div class="sistem-blocdois">
@@ -251,6 +337,9 @@
                 </div>
 
                 <i class="bi bi-arrow-right-short" id="icons-setblocodoisvoltar"></i>
+
+                <a href="" id="btn-vermaisfotos">Ver Mais</a>
+            
             </div>
 
         </article>
@@ -259,8 +348,8 @@
 
     <section class="sect-dois">
 
-        <article class="back-sectdois">
-            
+        <!--/*seção-dois - lado decoração*/-->
+        <article class="back-sectdois">           
             <article class="decor-tipoum">
                 <div id="decorumpequeno"></div>
                 <div id="decorummedio"></div>
@@ -286,8 +375,11 @@
             </article>
         </article>
 
+
+        <!--/*seção-dois - lado texto/formulario */-->
         <article class="espaço-sectdois">
 
+            <!--/*seção-dois - lado texto */-->
             <div class="fundo-textespaçodois">
                 <p id="titulo-espaçodois">Seus evento, nosso Espaço...</p>
 
@@ -304,9 +396,9 @@
                 </p>
             </div>
 
-
+             <!--/*seção-dois - lado formulario */-->
             <div class="fundo-formulariosectdois">
-                
+                             <!--/*seção-dois - configuração do formulario */-->
                 <form action="https://formsubmit.co/your@email.com" method="POST"id="back-form" >
                     <div class="fundo-tituloformulario">
                         <p id="text-tituloformulario">Consulte o nossos Serviços!</p>
@@ -330,7 +422,7 @@
 
 
     </section>
-    
+
     <section class="sect-tres">
 
         <p id="secttres-titulo">Adicionar Comentários:</p>
@@ -584,6 +676,8 @@
 
 
     <script src="js/script.js"></script>
+
+    <script src="https://kit.fontawesome.com/266015c250.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
